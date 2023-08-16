@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -66,4 +66,28 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+.card {
+  width: 16rem;
+  margin: auto;
+}
+
+.rating span {
+  margin: 0.05rem;
+}
+.rating svg {
+  color: #f8e825;
+}
+.rating-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-left: 0.5rem;
+}
+
+.product-title {
+  height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
