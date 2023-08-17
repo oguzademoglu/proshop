@@ -1,17 +1,18 @@
-import { products } from '../data/products.js'
+import Product from '../models/product.model.js'
 
-export const getProducts = (req, res) => {
+export const getProducts = async (req, res) => {
   try {
-    res.json(products)
+    const products = await Product.find()
+    res.status(200).json(products)
   } catch (error) {
     console.log(error)
   }
 }
 
-export const getProductById = (req, res) => {
+export const getProductById = async (req, res) => {
   try {
-    const product = products.find((p) => p._id === req.params.id)
-    res.json(product)
+    const product = await Product.findById(req.params.id)
+    res.status(200).json(product)
   } catch (error) {
     console.log(error)
   }
